@@ -1,0 +1,19 @@
+{
+  "name": "menu_node_monorepo",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "npm-run-all --parallel api:start ui:dev",
+    "api:start": "npm run start --workspace=api",
+    "ui:dev": "npm run dev --workspace=ui"
+  },
+  "author": "",
+  "license": "ISC",
+  "workspaces": [
+    "ui",
+    "api"
+  ],
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
+  }
+}
