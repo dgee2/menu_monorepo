@@ -3,9 +3,21 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
+    "build": "npm-run-all api:build ui:build",
     "dev": "npm-run-all --parallel api:start ui:dev",
+    "format": "npm-run-all api:format ui:format",
+    "lint": "npm-run-all api:lint ui:lint",
+    "test": "npm-run-all api:test ui:test",
+    "api:build": "npm run build --workspace=api",
+    "api:format": "npm run format --workspace=api",
+    "api:lint": "npm run lint --workspace=api",
     "api:start": "npm run start --workspace=api",
-    "ui:dev": "npm run dev --workspace=ui"
+    "api:test": "npm run test --workspace=api",
+    "ui:build": "npm run build --workspace=ui",
+    "ui:dev": "npm run dev --workspace=ui",
+    "ui:format": "npm run format --workspace=ui",
+    "ui:lint": "npm run lint --workspace=ui",
+    "ui:test": "npm run test --workspace=ui"
   },
   "author": "",
   "license": "ISC",
