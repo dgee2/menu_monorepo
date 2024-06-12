@@ -9,3 +9,8 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
+    groups:
+      dependencies:
+        applies-to: version-updates
+        patterns:
+          - "*"
